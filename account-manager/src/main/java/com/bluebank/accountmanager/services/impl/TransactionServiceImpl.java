@@ -4,9 +4,11 @@ import com.bluebank.accountmanager.model.Transaction;
 import com.bluebank.accountmanager.repository.TransactionRepository;
 import com.bluebank.accountmanager.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TransactionServiceImpl implements TransactionService {
 
     @Autowired
