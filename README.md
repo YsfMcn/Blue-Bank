@@ -18,8 +18,8 @@ Java: openjdk 17
 	
 ## Explore Rest API
 
-  POST /api/v1/account
-   input sample as raw JSON body: {"customerID": 2, "initialCredit": 70}
+  POST /api/v1/account 
+    	=> input sample as raw JSON body: {"customerID": 2, "initialCredit": 70}
   
   GET /api/v1/customer/{customerId}
-   customerId can be set to 1, 2, or 3. 
+    	=> customerId can be set to 1, 2, or 3. 
