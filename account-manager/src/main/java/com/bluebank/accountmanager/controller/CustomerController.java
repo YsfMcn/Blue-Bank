@@ -38,8 +38,9 @@ public class CustomerController {
         List<Account> accountList = accountService.getAllAccountsByCustomerId(id);
         List<Transaction> transactionList = new ArrayList<>();
         accountList.forEach(account -> transactionList.addAll(transactionService.getAllTransactionByAccountId(account.getId())));
-        userInfoDTO.setCustomer(customer);
-        userInfoDTO.setAccountList(accountList);
+        userInfoDTO.setCustomerName(customer.getName());
+        userInfoDTO.setCustomerSurname(customer.getSurname());
+        userInfoDTO.setTotalBalance(accountList.stream().mapToLong(Account::getBalance).sum());
         userInfoDTO.setTransactionList(transactionList);
         return ok(userInfoDTO);
     }
